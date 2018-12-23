@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Map from './Map';
+import Map from './components/Map';
+import Chart from './components/Chart';
 import axios from 'axios';
 import { csv } from 'd3-fetch';
 import './App.css';
@@ -7,48 +8,40 @@ import './App.css';
 class App extends Component {
   state = {
     oilData: null,
-    cpi: null
+    cpi: null,
+    countries: null
   }
 
   async componentDidMount() {
     const cpi = await csv("cpi.csv");
+    const countries = await csv("locations_international_atlas.csv");
     axios.get("https://atlas.media.mit.edu/hs92/export/2016/all/show/2709/")
       .then(response => {
-        this.setState({ oilData: response.data.data, cpi });
+        this.setState({ oilData: response.data.data, cpi, countries });
       })
       .catch(error => console.log(error));
   }
 
-  totalExportValue = (arr) => {
-    let total = 0;
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i].export_val) {
-        total += arr[i].export_val;
-      }
-    }
-    return total;
-  }
-
-  handleClick(geography, evt) {
+  handleClick = (geography, evt) => {
     console.log('Event: ', evt);
     console.log("Geography data: ", geography.properties.name);
   }
 
   render() {
-    const { oilData, cpi } = this.state;
+    const { oilData, cpi, countries } = this.state;
 
     if (oilData && cpi) {
       return (
         <div>
           <Map handleClick={this.handleClick}/>
           <div>
-            {this.totalExportValue(oilData)}
-          </div>
-          <div>
             {JSON.stringify(oilData)}
           </div>
           <div>
             {cpi.find(x => x.Jurisdiction === "Angola").Jurisdiction}
+          </div>
+          <div>
+            {JSON.stringify(countries)}
           </div>
           <div>
             {JSON.stringify(cpi)}
