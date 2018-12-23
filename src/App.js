@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { csv } from 'd3-fetch';
+import {
+  ComposableMap,
+  ZoomableGroup,
+  Geographies,
+  Geography,
+} from 'react-simple-maps';
 import './App.css';
+
+const wrapperStyles = {
+  width: "100%",
+  maxWidth: 980,
+  margin: "0 auto",
+}
 
 class App extends Component {
   state = {
@@ -28,22 +40,74 @@ class App extends Component {
     return total;
   }
 
+  handleClick(geography, evt) {
+    console.log("Geography data: ", geography.properties.name);
+  }
+
   render() {
-    if (this.state.cpi) { console.log(this.state.cpi.find(x => x.Jurisdiction === "Angola").Jurisdiction); }
-    if (this.state.oilData) {
+    const { oilData, cpi } = this.state;
+
+    if (oilData && cpi) {
       return (
         <div>
-          <div>
-            {this.totalExportValue(this.state.oilData)}
+          <div style={wrapperStyles}>
+            <ComposableMap
+              projectionConfig={{
+                scale: 205,
+                rotation: [-11,0,0],
+              }}
+              width={980}
+              height={551}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              >
+              <ZoomableGroup center={[0,20]} disablePanning>
+                <Geographies geography="/world-50m.json">
+                  {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
+                    <Geography
+                      key={i}
+                      geography={geography}
+                      projection={projection}
+                      onClick={this.handleClick}
+                      style={{
+                        default: {
+                          fill: "#ECEFF1",
+                          stroke: "#607D8B",
+                          strokeWidth: 0.75,
+                          outline: "none",
+                        },
+                        hover: {
+                          fill: "#607D8B",
+                          stroke: "#607D8B",
+                          strokeWidth: 0.75,
+                          outline: "none",
+                        },
+                        pressed: {
+                          fill: "#FF5722",
+                          stroke: "#607D8B",
+                          strokeWidth: 0.75,
+                          outline: "none",
+                        },
+                      }}
+                    />
+                  ))}
+                </Geographies>
+              </ZoomableGroup>
+            </ComposableMap>
           </div>
           <div>
-            {JSON.stringify(this.state.oilData)}
+            {this.totalExportValue(oilData)}
           </div>
           <div>
-            {this.state.cpi.find(x => x.Jurisdiction === "Angola").Jurisdiction}
+            {JSON.stringify(oilData)}
           </div>
           <div>
-            {JSON.stringify(this.state.cpi)}
+            {cpi.find(x => x.Jurisdiction === "Angola").Jurisdiction}
+          </div>
+          <div>
+            {JSON.stringify(cpi)}
           </div>
         </div>
       );
@@ -51,7 +115,7 @@ class App extends Component {
 
     return (
       <div>Loading...</div>
-    )
+    );
   }
 }
 
