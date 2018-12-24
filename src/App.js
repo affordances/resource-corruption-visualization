@@ -12,8 +12,9 @@ class App extends Component {
 
   handleClick = (geography, e) => {
     e.preventDefault();
-    const country = countries.find(country => country.name === geography.properties.name)
-    this.getOilData(country.code.toLowerCase());
+    const country = countries.find(country => country["name"] === geography["properties"]["name"]);
+    if (country === undefined || country["code"] === undefined) { return; }
+    this.getOilData(country["code"].toLowerCase());
   }
 
   getOilData = (countryCode) => {
@@ -24,15 +25,8 @@ class App extends Component {
       .catch(error => console.log(error));
   }
 
-  totalExportValue = (arr) => {
-    // make array of objects, year: totalExportValue
-    // let total = 0;
-    // for (let i = 0; i < arr.length; i++) {
-    //   if (arr[i].import_val) {
-    //     total += arr[i].import_val;
-    //   }
-    // }
-    // return total;
+  totalExportValues = (oilData) => {
+    // totals are wrong, debug
   }
 
   render() {
@@ -42,7 +36,10 @@ class App extends Component {
         <Map handleClick={this.handleClick}/>
         {
           oilData ?
-          <div>
+            <div>
+              {/* {this.totalExportValues(oilData).map(year => {
+                return <div>{year["year"]}: {year["total"]}</div>
+              })} */}
             {JSON.stringify(oilData)}
           </div>
           : null
