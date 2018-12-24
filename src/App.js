@@ -10,20 +10,29 @@ class App extends Component {
     oilData: null
   }
 
+  handleClick = (geography, e) => {
+    e.preventDefault();
+    const country = countries.find(country => country.name === geography.properties.name)
+    this.getOilData(country.code.toLowerCase());
+  }
+
   getOilData = (countryCode) => {
-    console.log(countryCode);
-    axios.get(`https://atlas.media.mit.edu/hs92/export/1998.2015/${countryCode.toLowerCase()}/show/2709/`)
+    axios.get(`https://atlas.media.mit.edu/hs92/export/1998.2015/${countryCode}/show/2709/`)
       .then(response => {
-        // strip data function here? probably unnecessary
         this.setState({ oilData: response.data.data });
       })
       .catch(error => console.log(error));
   }
 
-  handleClick = (geography, e) => {
-    e.preventDefault();
-    const country = countries.find(country => country.name === geography.properties.name)
-    this.getOilData(country.code);
+  totalExportValue = (arr) => {
+    // make array of objects, year: totalExportValue
+    // let total = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i].import_val) {
+    //     total += arr[i].import_val;
+    //   }
+    // }
+    // return total;
   }
 
   render() {
@@ -31,7 +40,13 @@ class App extends Component {
     return (
       <div>
         <Map handleClick={this.handleClick}/>
-        {oilData ? <div>{JSON.stringify(oilData)}</div> : null}
+        {
+          oilData ?
+          <div>
+            {JSON.stringify(oilData)}
+          </div>
+          : null
+        }
       </div>
     );
   }
