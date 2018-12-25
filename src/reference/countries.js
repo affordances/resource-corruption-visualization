@@ -452,7 +452,8 @@ const countries = [
          "2013":34,
          "2014":35,
          "2015":34
-      }
+      },
+      "code":"BOL"
    },
    {
       "name":"Bosnia and Herzegovina",
@@ -477,52 +478,6 @@ const countries = [
          "2015":38
       },
       "code":"BIH"
-   },
-   {
-      "name":"Bosnia and Herzgegovina",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":2.9,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Bosnia & Herzegovina",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":3.3,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
    },
    {
       "name":"Botswana",
@@ -591,29 +546,6 @@ const countries = [
          "2011":5.21,
          "2012":55,
          "2013":60,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Brunei Darussalam",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":5.5,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
          "2014":null,
          "2015":null
       },
@@ -764,29 +696,6 @@ const countries = [
       "code":"CAN"
    },
    {
-      "name":"Cape Verde",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":4.9,
-         "2008":5.1,
-         "2009":5.1,
-         "2010":5.1,
-         "2011":5.52,
-         "2012":60,
-         "2013":58,
-         "2014":57,
-         "2015":55
-      }
-   },
-   {
       "name":"Central African Republic",
       "years":{
          "1998":null,
@@ -931,76 +840,31 @@ const countries = [
       "code":"COM"
    },
    {
-      "name":"Congo Brazzaville",
+      "name":"Congo",
       "years":{
          "1998":null,
          "1999":null,
          "2000":null,
          "2001":null,
          "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
+         "2003":2.2,
+         "2004":2.3,
+         "2005":2.3,
+         "2006":2.2,
+         "2007":2.1,
          "2008":null,
          "2009":1.9,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo-Brazzaville",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
          "2010":2.1,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
+         "2011":2.15,
+         "2012":26,
+         "2013":22,
+         "2014":23,
+         "2015":23
+      },
+      "code":"COG"
    },
    {
-      "name":"Congo Democratic Republic",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":2.1,
-         "2006":2,
-         "2007":1.9,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo. Democratic Republic",
+      "name":"Dem. Rep. Congo",
       "years":{
          "1998":null,
          "1999":null,
@@ -1009,156 +873,19 @@ const countries = [
          "2002":null,
          "2003":null,
          "2004":2,
-         "2005":null,
-         "2006":null,
-         "2007":null,
+         "2005":2.1,
+         "2006":2,
+         "2007":1.9,
          "2008":1.7,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo Republic",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":2.2,
-         "2007":2.1,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":26,
+         "2009":1.9,
+         "2010":2,
+         "2011":2.02,
+         "2012":21,
          "2013":22,
-         "2014":23,
-         "2015":23
-      }
-   },
-   {
-      "name":"Congo Republic",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":2.15,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo. Republic",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":1.9,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo Republic of",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":2.3,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo. Republic of",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":2.3,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Congo Republic of the",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":2.2,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
+         "2014":22,
+         "2015":22
+      },
+      "code":"COD"
    },
    {
       "name":"Costa Rica",
@@ -1187,62 +914,16 @@ const countries = [
    {
       "name":"Cote d´Ivoire",
       "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
+         "1998":3.1,
+         "1999":2.6,
+         "2000":2.7,
          "2001":2.4,
-         "2002":null,
-         "2003":null,
-         "2004":2,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Cote d'Ivoire",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
          "2002":2.7,
          "2003":2.1,
-         "2004":null,
+         "2004":2,
          "2005":1.9,
-         "2006":null,
-         "2007":2.1,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Côte d´Ivoire",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
          "2006":2.1,
-         "2007":null,
+         "2007":2.1,
          "2008":2,
          "2009":2.1,
          "2010":2.2,
@@ -1251,30 +932,8 @@ const countries = [
          "2013":27,
          "2014":32,
          "2015":32
-      }
-   },
-   {
-      "name":"Côte-d'Ivoire",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":2.7,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
+      },
+      "code":"CIV"
    },
    {
       "name":"Croatia",
@@ -1349,7 +1008,7 @@ const countries = [
       "code":"CYP"
    },
    {
-      "name":"Czech Republic",
+      "name":"Czech Rep.",
       "years":{
          "1998":4.8,
          "1999":4.6,
@@ -1360,7 +1019,7 @@ const countries = [
          "2004":4.2,
          "2005":4.3,
          "2006":4.8,
-         "2007":null,
+         "2007":5.2,
          "2008":5.2,
          "2009":4.9,
          "2010":4.6,
@@ -1371,98 +1030,6 @@ const countries = [
          "2015":56
       },
       "code":"CZE"
-   },
-   {
-      "name":"Czech Republik",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":5.2,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Democratic Republic of Congo",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":1.9,
-         "2010":2,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Democratic Republic of the Congo",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":21,
-         "2013":22,
-         "2014":22,
-         "2015":22
-      }
-   },
-   {
-      "name":"Democratic Republic of the Congo",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":2.02,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
    },
    {
       "name":"Denmark",
@@ -1537,58 +1104,12 @@ const countries = [
       "code":"DMA"
    },
    {
-      "name":"Dominican Rep",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":3.1,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
       "name":"Dominican Rep.",
       "years":{
          "1998":null,
          "1999":null,
          "2000":null,
-         "2001":null,
-         "2002":3.5,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
-   },
-   {
-      "name":"Dominican Republic",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
+         "2001":3.1,
          "2002":null,
          "2003":3.3,
          "2004":2.9,
@@ -1847,7 +1368,7 @@ const countries = [
       "code":"FRA"
    },
    {
-      "name":"FYR Macedonia",
+      "name":"Macedonia",
       "years":{
          "1998":null,
          "1999":null,
@@ -1867,7 +1388,8 @@ const countries = [
          "2013":null,
          "2014":null,
          "2015":null
-      }
+      },
+      "code":"MKD"
    },
    {
       "name":"Gabon",
@@ -2322,7 +1844,8 @@ const countries = [
          "2013":25,
          "2014":27,
          "2015":27
-      }
+      },
+      "code":"IRN"
    },
    {
       "name":"Iraq",
@@ -2419,29 +1942,6 @@ const countries = [
          "2015":44
       },
       "code":"ITA"
-   },
-   {
-      "name":"Ivory Coast",
-      "years":{
-         "1998":3.1,
-         "1999":2.6,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":null,
-         "2011":null,
-         "2012":null,
-         "2013":null,
-         "2014":null,
-         "2015":null
-      }
    },
    {
       "name":"Jamaica",
@@ -2588,7 +2088,7 @@ const countries = [
       "code":"KIR"
    },
    {
-      "name":"Korea (North)",
+      "name":"Dem. Rep. Korea",
       "years":{
          "1998":null,
          "1999":null,
@@ -2608,10 +2108,11 @@ const countries = [
          "2013":8,
          "2014":8,
          "2015":8
-      }
+      },
+      "code":"PRK"
    },
    {
-      "name":"Korea (South)",
+      "name":"Korea",
       "years":{
          "1998":null,
          "1999":null,
@@ -2631,30 +2132,8 @@ const countries = [
          "2013":55,
          "2014":55,
          "2015":56
-      }
-   },
-   {
-      "name":"Kosovo",
-      "years":{
-         "1998":null,
-         "1999":null,
-         "2000":null,
-         "2001":null,
-         "2002":null,
-         "2003":null,
-         "2004":null,
-         "2005":null,
-         "2006":null,
-         "2007":null,
-         "2008":null,
-         "2009":null,
-         "2010":2.8,
-         "2011":2.85,
-         "2012":34,
-         "2013":33,
-         "2014":33,
-         "2015":33
-      }
+      },
+      "code":"KOR"
    },
    {
       "name":"Kuwait",

@@ -14,34 +14,43 @@ class App extends Component {
     e.preventDefault();
     const country = countries.find(country => country["name"] === geography["properties"]["name"]);
     if (country === undefined || country["code"] === undefined) { return; }
+     // need error message here
     this.getOilData(country["code"].toLowerCase());
   }
 
   getOilData = (countryCode) => {
     axios.get(`https://atlas.media.mit.edu/hs92/export/1998.2015/${countryCode}/show/2709/`)
       .then(response => {
-        this.setState({ oilData: response.data.data });
+        const oilData = this.totalExportValues(response.data.data);
+        this.setState({ oilData });
       })
       .catch(error => console.log(error));
   }
 
   totalExportValues = (oilData) => {
-    // totals are wrong, debug
+    let totals = {};
+    for (let i = 0; i < oilData.length; i++) {
+      const currentObj = oilData[i];
+      if (currentObj.export_val && !totals[currentObj["year"]]) {
+        totals[currentObj["year"]] = currentObj.export_val;
+      } else if (currentObj.export_val) {
+        totals[currentObj["year"]] += currentObj.export_val;
+      }
+    }
+    return totals;
   }
 
   render() {
     const { oilData } = this.state;
+    if (oilData) { console.log(this.totalExportValues(oilData)); }
     return (
       <div>
         <Map handleClick={this.handleClick}/>
         {
           oilData ?
             <div>
-              {/* {this.totalExportValues(oilData).map(year => {
-                return <div>{year["year"]}: {year["total"]}</div>
-              })} */}
-            {JSON.stringify(oilData)}
-          </div>
+              {JSON.stringify(oilData)}
+            </div>
           : null
         }
       </div>
