@@ -9,7 +9,8 @@ const Chart = props => {
     datasets: [
       {
         label: 'Oil data',
-        fill: false,
+        yAxisID: 'A',
+        fill: true,
         lineTension: 0.1,
         backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
@@ -26,40 +27,60 @@ const Chart = props => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: props.oilData
+        spanGaps: false,
+        data: props.oilData,
       },
       {
         label: 'Corruption data',
+        yAxisID: 'B',
         fill: false,
         lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
+        borderColor: 'red',
         borderCapStyle: 'butt',
         borderDash: [],
         borderDashOffset: 0.0,
         borderJoinStyle: 'miter',
-        pointBorderColor: 'rgba(75,192,192,1)',
+        pointBorderColor: 'red',
         pointBackgroundColor: '#fff',
         pointBorderWidth: 1,
         pointHoverRadius: 5,
-        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        pointHoverBorderColor: 'rgba(220,220,220,1)',
+        pointHoverBackgroundColor: 'white',
+        pointHoverBorderColor: 'red',
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
+        spanGaps: false,
         data: props.corruptionData
       },
     ]
   };
 
   return (
-    <div>
+    <div className="chart-container">
       <Line
         data={data}
         options={{
+          maintainAspectRatio: false,
           title: {
             display: true,
             text: props.countryName
+          },
+          scales: {
+            yAxes: [
+            {
+              id: 'A',
+              type: 'linear',
+              position: 'left',
+            },
+            {
+              id: 'B',
+              type: 'linear',
+              position: 'right',
+              ticks: {
+                max: 100,
+                min: 0
+              }
+            }]
           }
         }}
       />

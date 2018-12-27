@@ -6,16 +6,10 @@ import {
   Geography,
 } from "react-simple-maps"
 
-const wrapperStyles = {
-  width: "100%",
-  maxWidth: 980,
-  margin: "0 auto",
-}
-
 const Map = props => {
   const { handleClick } = props;
   return (
-    <div style={wrapperStyles}>
+    <div className="map-container">
       <ComposableMap
         projectionConfig={{
           scale: 205,
