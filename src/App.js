@@ -3,7 +3,7 @@ import Map from './components/Map';
 import Chart from './components/Chart';
 import axios from 'axios';
 import countries from './reference/countries';
-import exportTotals from './reference/totals';
+import nullTotals from './reference/totals';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   totalExportValues = (oilData) => {
-    let totals = { ...exportTotals };
+    let totals = { ...nullTotals };
     for (let i = 0; i < oilData.length; i++) {
       const currentObj = oilData[i];
       if (currentObj.export_val && !totals[currentObj["year"]]) {

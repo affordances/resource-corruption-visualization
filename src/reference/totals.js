@@ -1,4 +1,4 @@
-const exportTotals = {
+const nullTotals = {
    "1998":null,
    "1999":null,
    "2000":null,
@@ -19,4 +19,4 @@ const exportTotals = {
    "2015":null
 }
 
-module.exports = exportTotals;
+module.exports = nullTotals;
