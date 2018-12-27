@@ -11,7 +11,7 @@ const override = css`
 const Loading = props => {
   return (
     <div className="loading-container">
-      <p>Loading</p>
+      <p>Fetching data...</p>
       <BarLoader
         className={override}
         sizeUnit={"px"}
