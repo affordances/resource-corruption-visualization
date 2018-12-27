@@ -54,7 +54,15 @@ const Chart = props => {
 
   return (
     <div>
-      <Line data={data} />
+      <Line
+        data={data}
+        options={{
+          title: {
+            display: true,
+            text: props.countryName
+          }
+        }}
+      />
     </div>
   );
 }

@@ -9,7 +9,8 @@ import './App.css';
 class App extends Component {
   state = {
     oilData: null,
-    corruptionData: null
+    corruptionData: null,
+    countryName: null
   }
 
   handleClick = (geography, e) => {
@@ -18,10 +19,11 @@ class App extends Component {
     if (country === undefined || country["code"] === undefined) { return; }
      // need error message here
     const corruptionData = country["years"];
+    const countryName = country["name"];
     axios.get(`https://atlas.media.mit.edu/hs92/export/1998.2015/${country["code"].toLowerCase()}/show/2709/`)
       .then(response => {
         const oilData = this.totalExportValues(response.data.data);
-        this.setState({ oilData, corruptionData });
+        this.setState({ oilData, corruptionData, countryName });
       })
       .catch(error => console.log(error));
   }
@@ -48,7 +50,7 @@ class App extends Component {
   }
 
   render() {
-    const { oilData, corruptionData } = this.state;
+    const { oilData, corruptionData, countryName } = this.state;
     return (
       <div>
         <Map handleClick={this.handleClick}/>
@@ -57,6 +59,7 @@ class App extends Component {
             <Chart
               oilData={this.makeArray(oilData)}
               corruptionData={this.makeArray(corruptionData)}
+              countryName={countryName}
             />
           : null
         }
