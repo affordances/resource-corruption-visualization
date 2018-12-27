@@ -17,16 +17,11 @@ class App extends Component {
     const country = countries.find(country => country["name"] === geography["properties"]["name"]);
     if (country === undefined || country["code"] === undefined) { return; }
      // need error message here
-    this.getOilData(country["code"].toLowerCase());
     const corruptionData = country["years"];
-    this.setState({ corruptionData });
-  }
-
-  getOilData = (countryCode) => {
-    axios.get(`https://atlas.media.mit.edu/hs92/export/1998.2015/${countryCode}/show/2709/`)
+    axios.get(`https://atlas.media.mit.edu/hs92/export/1998.2015/${country["code"].toLowerCase()}/show/2709/`)
       .then(response => {
         const oilData = this.totalExportValues(response.data.data);
-        this.setState({ oilData });
+        this.setState({ oilData, corruptionData });
       })
       .catch(error => console.log(error));
   }
