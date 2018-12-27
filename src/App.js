@@ -3,11 +3,13 @@ import Map from './components/Map';
 import Chart from './components/Chart';
 import axios from 'axios';
 import countries from './reference/countries';
+import exportTotals from './reference/totals';
 import './App.css';
 
 class App extends Component {
   state = {
-    oilData: null
+    oilData: null,
+    corruptionData: null
   }
 
   handleClick = (geography, e) => {
@@ -16,6 +18,8 @@ class App extends Component {
     if (country === undefined || country["code"] === undefined) { return; }
      // need error message here
     this.getOilData(country["code"].toLowerCase());
+    const corruptionData = country["years"];
+    this.setState({ corruptionData });
   }
 
   getOilData = (countryCode) => {
@@ -28,7 +32,7 @@ class App extends Component {
   }
 
   totalExportValues = (oilData) => {
-    let totals = {};
+    let totals = { ...exportTotals };
     for (let i = 0; i < oilData.length; i++) {
       const currentObj = oilData[i];
       if (currentObj.export_val && !totals[currentObj["year"]]) {
@@ -40,17 +44,25 @@ class App extends Component {
     return totals;
   }
 
+  makeArray = (dataObj) => {
+    let arr = [];
+    Object.entries(dataObj).forEach(([key, value]) => {
+      arr.push(value);
+    });
+    return arr;
+  }
+
   render() {
-    const { oilData } = this.state;
-    if (oilData) { console.log(this.totalExportValues(oilData)); }
+    const { oilData, corruptionData } = this.state;
     return (
       <div>
         <Map handleClick={this.handleClick}/>
         {
-          oilData ?
-            <div>
-              {JSON.stringify(oilData)}
-            </div>
+          oilData && corruptionData ?
+            <Chart
+              oilData={this.makeArray(oilData)}
+              corruptionData={this.makeArray(corruptionData)}
+            />
           : null
         }
       </div>
