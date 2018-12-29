@@ -21,7 +21,7 @@ const Map = props => {
           width: "100%",
           height: "auto",
         }}
-        >
+      >
         <ZoomableGroup center={[0,20]} disablePanning>
           <Geographies geography="/world-50m.json">
             {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
@@ -44,7 +44,7 @@ const Map = props => {
                     outline: "none",
                   },
                   pressed: {
-                    fill: "#FF5722",
+                    fill: "#4cb5b1",
                     stroke: "#607D8B",
                     strokeWidth: 0.75,
                     outline: "none",
