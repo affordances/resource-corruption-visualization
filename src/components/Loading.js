@@ -16,7 +16,7 @@ const Loading = props => {
         className={override}
         sizeUnit={"px"}
         size={150}
-        color={'#36D7B7'}
+        color={'#4cb5b1'}
       />
     </div>
   )

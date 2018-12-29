@@ -8,7 +8,7 @@ const Chart = props => {
     labels: years,
     datasets: [
       {
-        label: 'Oil data',
+        label: 'Oil export value',
         yAxisID: 'A',
         fill: true,
         lineTension: 0.1,
@@ -31,7 +31,7 @@ const Chart = props => {
         data: props.oilData,
       },
       {
-        label: 'Corruption data',
+        label: 'Corruption perception (higher is better)',
         yAxisID: 'B',
         fill: false,
         lineTension: 0.1,
@@ -59,11 +59,15 @@ const Chart = props => {
     <div className="chart-container">
       <Line
         data={data}
+        legend={{
+          position: 'bottom'
+        }}
         options={{
           maintainAspectRatio: false,
           title: {
             display: true,
-            text: props.countryName
+            text: props.countryName,
+            fontSize: 20,
           },
           scales: {
             yAxes: [
