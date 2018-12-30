@@ -5,6 +5,7 @@ import {
   Geographies,
   Geography,
 } from "react-simple-maps"
+import world from '../reference/world';
 
 const Map = props => {
   const { handleClick } = props;
@@ -23,7 +24,7 @@ const Map = props => {
         }}
       >
         <ZoomableGroup center={[0,20]} disablePanning>
-          <Geographies geography="/world-50m.json">
+          <Geographies geography={world}>
             {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
               <Geography
                 key={i}
