@@ -131,7 +131,7 @@ body {
 .footer-container {
   margin-top: 75px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .footer-container a {
