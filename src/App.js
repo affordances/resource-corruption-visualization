@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Octicon, { MarkGithub } from '@githubprimer/octicons-react'
 import GetStarted from './components/GetStarted';
 import Map from './components/Map';
 import Chart from './components/Chart';
 import Loading from './components/Loading';
 import NoData from './components/NoData';
+import Credits from './components/Credits';
 import axios from 'axios';
 import countries from './reference/countries';
 import nullTotals from './reference/totals';
@@ -93,12 +95,27 @@ class App extends Component {
 
     return (
       <div className="container">
-        <div className="title">
-          <h1>Oil and corruption: a visualization</h1>
+        <div className="header-container">
+          <div className="title-container">
+            <div className="title">
+              <h1>Oil and corruption</h1>
+              <h5>a visualization by gabriel duquette</h5>
+            </div>
+          </div>
+          <Credits />
         </div>
         <div className="content-container">
           <Map handleClick={this.handleClick}/>
           {content}
+        </div>
+        <div className="footer-container">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/affordances/resource-corruption-visualization"
+          >
+            <Octicon icon={MarkGithub} size='medium' ariaLabel='GitHub'/>
+          </a>
         </div>
       </div>
     );

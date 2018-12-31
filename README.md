@@ -33,4 +33,6 @@ organizeData = (corruptionData, countryData) => {
 
 I still had to go through the resulting object and remove duplicate countries and add a handful of still-missing country codes, but I was glad to have to automated the majority of the work.
 
-For simplicity's sake, I ignored Transparency International's [methodology change](https://www.transparency.org/files/content/pressrelease/2012_CPIUpdatedMethodology_EMBARGO_EN.pdf) and normalized their rankings across the entire dataset -- I'm a developer, not a data scientist, and this WAS only an exercise after all.
+### Caveat
+
+For simplicity's sake, I ignored Transparency International's [methodology change](https://www.transparency.org/files/content/pressrelease/2012_CPIUpdatedMethodology_EMBARGO_EN.pdf) and normalized (i.e. multiplied by 10) their pre-2012 rankings. For a "real" version of the same app, I would not do this.

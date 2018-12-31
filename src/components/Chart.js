@@ -63,7 +63,7 @@ const Chart = props => {
           position: 'bottom'
         }}
         options={{
-          maintainAspectRatio: false,
+          maintainAspectRatio: true,
           title: {
             display: true,
             text: props.countryName,

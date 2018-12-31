@@ -4,6 +4,7 @@
   "homepage": "http://affordances.github.io/resource-corruption-visualization",
   "private": true,
   "dependencies": {
+    "@githubprimer/octicons-react": "^8.2.0",
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
     "chartjs": "^0.3.24",
