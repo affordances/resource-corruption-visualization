@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 30px 0 65px 0;
+  margin: 45px 0 65px 0;
 }
 
 .title {
@@ -129,7 +129,7 @@ body {
 }
 
 .footer-container {
-  margin-top: 75px;
+  margin-top: 60px;
   display: flex;
   justify-content: flex-end;
 }
