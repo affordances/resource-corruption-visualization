@@ -1,4 +1,4 @@
-## UPDATE: API is now paid, so the app no longer works. Alas.
+### UPDATE: API is now paid, so the app no longer works. Alas.
 
 # Oil and corruption: a visualization
 
