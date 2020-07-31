@@ -1,3 +1,5 @@
+## UPDATE: API is now paid, so the app no longer works. Alas.
+
 # Oil and corruption: a visualization
 
 I wanted a way to learn more about data visualization and related libraries, but I needed a thing to visualize. A friend suggested a possible link between corruption and natural resources like oil -- do oil booms increase corruption in already corrupt countries, or is there no relationship? I liked the idea and got to work.
