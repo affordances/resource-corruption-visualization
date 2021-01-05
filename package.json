@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@githubprimer/octicons-react": "^8.5.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chart.js": "^2.9.3",
     "chartjs": "^0.3.24",
     "react": "^16.13.1",
